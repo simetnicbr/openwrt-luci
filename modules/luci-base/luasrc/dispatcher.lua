@@ -284,6 +284,7 @@ function dispatch(request)
 		   resource    = luci.config.main.resourcebase;
 		   ifattr      = function(...) return _ifattr(...) end;
 		   attr        = function(...) return _ifattr(true, ...) end;
+		   url         = build_url;
 		}, {__index=function(table, key)
 			if key == "controller" then
 				return build_url()

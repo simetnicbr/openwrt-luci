@@ -150,6 +150,10 @@ function striptags(value)
 	return value and tparser.striptags(tostring(value))
 end
 
+function shellquote(value)
+	return string.format("'%s'", string.gsub(value or "", "'", "'\\''"))
+end
+
 -- for bash, ash and similar shells single-quoted strings are taken
 -- literally except for single quotes (which terminate the string)
 -- (and the exception noted below for dash (-) at the start of a

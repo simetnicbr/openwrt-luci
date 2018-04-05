@@ -63,7 +63,7 @@ function act_delete(num)
 
 		local lease_file = uci:get("upnpd", "config", "upnp_lease_file")
 		if lease_file and nixio.fs.access(lease_file) then
-			luci.sys.call("sed -i -e '%dd' %q" %{ idx, lease_file })
+			luci.sys.call("sed -i -e '%dd' %s" %{ idx, luci.util.shellquote(lease_file) })
 		end
 
 		luci.http.status(200, "OK")

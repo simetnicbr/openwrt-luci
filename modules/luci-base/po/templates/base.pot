@@ -304,6 +304,9 @@ msgid ""
 "option does not comply with IEEE 802.11n-2009!"
 msgstr ""
 
+msgid "An optional, short description for this device"
+msgstr ""
+
 msgid "Annex"
 msgstr ""
 
@@ -2176,6 +2179,9 @@ msgstr ""
 msgid "Note: interface name length"
 msgstr ""
 
+msgid "Notes"
+msgstr ""
+
 msgid "Notice"
 msgstr ""
 
@@ -2243,6 +2249,9 @@ msgid "Option removed"
 msgstr ""
 
 msgid "Optional"
+msgstr ""
+
+msgid "Optional, free-form notes about this device"
 msgstr ""
 
 msgid ""

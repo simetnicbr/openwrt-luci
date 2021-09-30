@@ -344,6 +344,9 @@ msgstr ""
 "Usará siempre canales de 40MHz incluso si el canal secundario se superpone. "
 "¡El uso de esta opción no cumple con IEEE 802.11n-2009!"
 
+msgid "An optional, short description for this device"
+msgstr "Una breve descripción opcional de este dispositivo"
+
 msgid "Annex"
 msgstr "Anexo"
 
@@ -2336,6 +2339,9 @@ msgstr "Nota: se borrarán los ficheros de configuración."
 msgid "Note: interface name length"
 msgstr "Nota: longitud del nombre de la interfaz"
 
+msgid "Notes"
+msgstr "Notas"
+
 msgid "Notice"
 msgstr "Aviso"
 
@@ -2411,6 +2417,9 @@ msgstr "Opción removida"
 
 msgid "Optional"
 msgstr "Opcional"
+
+msgid "Optional, free-form notes about this device"
+msgstr "Notas opcionales de forma libre sobre este dispositivo"
 
 msgid ""
 "Optional. 32-bit mark for outgoing encrypted packets. Enter value in hex, "

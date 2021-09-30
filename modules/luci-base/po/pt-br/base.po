@@ -357,6 +357,9 @@ msgid ""
 "option does not comply with IEEE 802.11n-2009!"
 msgstr ""
 
+msgid "An optional, short description for this device"
+msgstr "Uma descrição opcional e curta para este dispositivo"
+
 msgid "Annex"
 msgstr "Anexo"
 
@@ -2375,6 +2378,9 @@ msgstr "Nota: Os arquivos de configuração serão apagados."
 msgid "Note: interface name length"
 msgstr "Aviso: tamanho do nome da interface"
 
+msgid "Notes"
+msgstr "Anotações"
+
 msgid "Notice"
 msgstr "Aviso"
 
@@ -2450,6 +2456,9 @@ msgstr "Opção removida"
 
 msgid "Optional"
 msgstr "Opcional"
+
+msgid "Optional, free-form notes about this device"
+msgstr "Opcional, anotações diversas sobre este dispositivo"
 
 msgid ""
 "Optional. 32-bit mark for outgoing encrypted packets. Enter value in hex, "

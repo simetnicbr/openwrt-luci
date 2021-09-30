@@ -260,6 +260,9 @@ msgstr ""
 msgid "An additional network will be created if you leave this unchecked."
 msgstr "An additional network will be created if you leave this unchecked."
 
+msgid "An optional, short description for this device"
+msgstr ""
+
 msgid "Announce as default router even if no public prefix is available."
 msgstr ""
 
@@ -1730,6 +1733,9 @@ msgstr ""
 msgid "Note: interface name length"
 msgstr ""
 
+msgid "Notes"
+msgstr ""
+
 msgid "Notice"
 msgstr ""
 
@@ -1785,6 +1791,9 @@ msgid "Option changed"
 msgstr ""
 
 msgid "Option removed"
+msgstr ""
+
+msgid "Optional, free-form notes about this device"
 msgstr ""
 
 msgid "Optional, specify to override default server (tic.sixxs.net)"

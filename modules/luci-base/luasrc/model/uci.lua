@@ -40,7 +40,7 @@ function Cursor.apply(self, configlist, command)
 		return { "/sbin/luci-reload", unpack(configlist) }
 	else
 		return os.execute("/sbin/luci-reload %s >/dev/null 2>&1"
-			% table.concat(configlist, " "))
+			% util.shellquote(table.concat(configlist, " ")))
 	end
 end
 

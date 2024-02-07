@@ -8,7 +8,7 @@ function index()
 	entry({"admin", "services", "splash", "splashtext" }, form("splash/splashtext"), _("Splashtext"), 10)
 
 	local e
-	
+
 	e = node("splash")
 	e.target = call("action_dispatch")
 
@@ -71,6 +71,7 @@ function action_activate()
 		uci:foreach("luci_splash", "blacklist",
         	        function(s) if s.mac and s.mac:lower() == mac then blacklisted = true end
 	        end)
+
 		if blacklisted then	
 			luci.http.redirect(luci.dispatcher.build_url("splash" ,"blocked"))
 		else
@@ -94,7 +95,7 @@ function action_status_admin()
 	local uci = luci.model.uci.cursor_state()
 	local macs = luci.http.formvaluetable("save")
 
-	local changes = { 
+	local changes = {
 		whitelist = { },
 		blacklist = { },
 		lease     = { },
@@ -116,22 +117,22 @@ function action_status_admin()
 
 	if #changes.whitelist > 0 then
 		os.execute("luci-splash whitelist %s >/dev/null"
-			% table.concat(changes.whitelist))
+			% util.shellquote(table.concat(changes.whitelist)))
 	end
 
 	if #changes.blacklist > 0 then
 		os.execute("luci-splash blacklist %s >/dev/null"
-			% table.concat(changes.blacklist))
+			% util.shellquote(table.concat(changes.blacklist)))
 	end
 
 	if #changes.lease > 0 then
 		os.execute("luci-splash lease %s >/dev/null"
-			% table.concat(changes.lease))
+			% util.shellquote(table.concat(changes.lease)))
 	end
 
 	if #changes.remove > 0 then
 		os.execute("luci-splash remove %s >/dev/null"
-			% table.concat(changes.remove))
+			% util.shellquote(table.concat(changes.remove)))
 	end
 
 	luci.template.render("admin_status/splash", { is_admin = true })

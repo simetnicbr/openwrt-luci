@@ -226,8 +226,8 @@ function startstop(section, enabled)
 	uci:commit("ddns")
 	uci:unload("ddns")
 
-	-- start dynamic_dns_updater.sh script
-	local command = luci_helper .. [[ -S ]] .. section .. [[ -- start]]
+	-- start ddns-updater for section
+	local command = "%s -S %s -- start" %{ luci_helper, UTIL.shellquote(section) }
 	os.execute(command)
 	NX.nanosleep(3)	-- 3 seconds "show time"
 

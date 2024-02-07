@@ -1,6 +1,7 @@
 -- Copyright 2010 Jo-Philipp Wich <jow@openwrt.org>
 -- Licensed to the public under the Apache License 2.0.
 
+local utl = require "luci.util"
 local sys = require "luci.sys"
 local fs  = require "nixio.fs"
 
@@ -60,14 +61,14 @@ function host.write(self, s, val)
 		if util == "/usr/bin/etherwake" then
 			local iface = luci.http.formvalue("cbid.wol.1.iface")
 			cmd = "%s -D%s %q" %{
-				util, (iface ~= "" and " -i %q" % iface or ""), host
+				util, (iface ~= "" and " -i %s" % utl.shellquote(iface) or ""), host
 			}
 		else
 			cmd = "%s -v %q" %{ util, host }
 		end
 
 		local msg = "<p><strong>%s</strong><br /><br /><code>%s<br /><br />" %{
-			translate("Starting WoL utility:"), cmd
+			translate("Starting WoL utility:"), utl.pcdata(cmd)
 		}
 
 		local p = io.popen(cmd .. " 2>&1")
